@@ -5,11 +5,12 @@ def hello(array)
   collection =[]
   while i < array.length
    
-    collection << yield(array[i])
+    collection.push(yield(array[i]))
     i += 1
   end
+
   return collection
 end
-binding.pry
 
+binding.pry
 hello(["Tim", "Tom", "Jim"]) { |name| puts "Hi, #{name}" }
